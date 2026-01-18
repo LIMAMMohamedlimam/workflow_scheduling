@@ -22,15 +22,39 @@ import com.opencsv.CSVReaderBuilder;
 
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class CustomCostSimulation {
     private static final int IS_MultiObjective = 1;
-    private static final String SCHEDULING_ALGORITHM = "RDA"; // Options: ROUNDROBIN, FCFS, SA_MultiObjective
-    private static final String DATASET_USED = "task80";
+    private static  String SCHEDULING_ALGORITHM = "RDA"; // Options: ROUNDROBIN, FCFS, SA_MultiObjective
+    private static  String DATASET_USED = "task80";
     
 
     public static void main(String[] args) {
+        ArrayList<String> algorithms = new ArrayList<>(Arrays.asList(
+            "SA_MultiObjective", "MOWOA", "WOASA", "WOARDA", "RDA"
+        ));
+
+        ArrayList<String> datasets = new ArrayList<>(Arrays.asList(
+             "task40", "task80", "task120", "task160" , "task200", "task240", "task280"
+        ));
+
+        for (String dataset : datasets) {
+            for (String alg : algorithms) {
+                for (int i=0 ;i<100;i++){
+                    System.out.println("\n\n==============================");
+                    System.out.println("Running simulation number " + i + " with Algorithm: " + alg + " on Dataset: " + dataset);
+                    System.out.println("==============================\n");
+                    runSimulation(alg, dataset);
+                }
+            }
+        }
+    }
+
+    public static void runSimulation(String alg , String dataset) {
+        String DATASET_USED = dataset;
+        String SCHEDULING_ALGORITHM = alg;
         CloudSimPlus simulation = new CloudSimPlus(0.1);
         
         List<NodeSpec> nodes = loadNodesFromCSV(DATASET_USED + "_NodeDetails.csv");

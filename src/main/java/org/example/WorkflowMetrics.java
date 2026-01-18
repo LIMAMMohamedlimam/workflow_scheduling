@@ -56,7 +56,7 @@ public class WorkflowMetrics {
         System.out.printf("\n3. TOTAL ENERGY: %.4f Watt-Seconds (Joules)\n", totalEnergy);
 
         // 4. DETAILED BREAKDOWN
-        printDetailedMetrics();
+        // printDetailedMetrics();
     }
 
     private void saveToCSV(String algorithmName, double makespan, double cost, double energy, String datasetUsed) {
