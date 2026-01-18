@@ -1,3 +1,14 @@
+error id: file://<WORKSPACE>/src/main/java/org/example/WorkflowMetrics.java:_empty_/File#
+file://<WORKSPACE>/src/main/java/org/example/WorkflowMetrics.java
+empty definition using pc, found symbol in pc: _empty_/File#
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 1664
+uri: file://<WORKSPACE>/src/main/java/org/example/WorkflowMetrics.java
+text:
+```scala
 package org.example;
 
 import org.cloudsimplus.cloudlets.Cloudlet;
@@ -7,8 +18,6 @@ import org.cloudsimplus.datacenters.Datacenter;
 import org.cloudsimplus.hosts.Host;
 import org.cloudsimplus.power.models.PowerModelHost;
 import org.cloudsimplus.power.models.PowerModelHostSimple;
-
-import java.io.File;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -33,45 +42,29 @@ public class WorkflowMetrics {
         this.cloudletToVmMap = cloudletToVmMap;
     }
 
-    public void calculateAndPrint(String algorithmName , String datasetUsed) {
+    public void calculateAndPrint(String algorithmName) {
         // Calculate metrics
         double makespan = calculateMakespan();
         double totalCost = calculateTotalCost();
         double totalEnergy = calculateTotalEnergyNew();
         
         // Save to CSV
-        saveToCSV(algorithmName, makespan, totalCost, totalEnergy , datasetUsed);
-
-        System.out.println("\n" + "=".repeat(80));
-        System.out.println("WORKFLOW EXECUTION METRICS - MATHEMATICAL MODEL");
-        System.out.println("=".repeat(80));
-
-        // 1. MAKESPAN
-        System.out.printf("\n1. MAKESPAN: %.4f seconds\n", makespan);
-
-        // 2. TOTAL COST
-        System.out.printf("\n2. TOTAL COST: $%.4f\n", totalCost);
-
-        // 3. ENERGY CONSUMPTION
-        System.out.printf("\n3. TOTAL ENERGY: %.4f Watt-Seconds (Joules)\n", totalEnergy);
-
-        // 4. DETAILED BREAKDOWN
-        printDetailedMetrics();
+        saveToCSV(algorithmName, makespan, totalCost, totalEnergy);
     }
 
-    private void saveToCSV(String algorithmName, double makespan, double cost, double energy, String datasetUsed) {
+    private void saveToCSV(String algorithmName, double makespan, double cost, double energy) {
         String csvFile = "workflow_metrics.csv";
-        boolean fileExists = new File(csvFile).exists();
+        boolean fileExists = new F@@ile(csvFile).exists();
         
         try (FileWriter writer = new FileWriter(csvFile, true)) {
             // Write header if file doesn't exist
             if (!fileExists) {
-                writer.append("algorithm_name,makespan,cost,energy,dataset_used\n");
+                writer.append("algorithm_name,makespan,cost,energy\n");
             }
             
             // Write data
-            writer.append(String.format("%s,%.4f,%.4f,%.4f,%s\n", 
-                algorithmName, makespan, cost, energy, datasetUsed));
+            writer.append(String.format("%s,%.4f,%.4f,%.4f\n", 
+                algorithmName, makespan, cost, energy));
             
         } catch (IOException e) {
             System.err.println("Error writing to CSV file: " + e.getMessage());
@@ -425,3 +418,10 @@ private double calculateTaskEnergySimple(Cloudlet cloudlet, Vm vm) {
 
 
 }
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: _empty_/File#

@@ -1,3 +1,14 @@
+error id: file://<WORKSPACE>/src/main/java/org/example/WorkflowMetrics.java:org/example/WorkflowMetrics#saveToCSV#
+file://<WORKSPACE>/src/main/java/org/example/WorkflowMetrics.java
+empty definition using pc, found symbol in pc: org/example/WorkflowMetrics#saveToCSV#
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 1466
+uri: file://<WORKSPACE>/src/main/java/org/example/WorkflowMetrics.java
+text:
+```scala
 package org.example;
 
 import org.cloudsimplus.cloudlets.Cloudlet;
@@ -40,7 +51,7 @@ public class WorkflowMetrics {
         double totalEnergy = calculateTotalEnergyNew();
         
         // Save to CSV
-        saveToCSV(algorithmName, makespan, totalCost, totalEnergy , datasetUsed);
+        saveT@@oCSV(algorithmName, makespan, totalCost, totalEnergy , datasetUsed);
 
         System.out.println("\n" + "=".repeat(80));
         System.out.println("WORKFLOW EXECUTION METRICS - MATHEMATICAL MODEL");
@@ -59,19 +70,19 @@ public class WorkflowMetrics {
         printDetailedMetrics();
     }
 
-    private void saveToCSV(String algorithmName, double makespan, double cost, double energy, String datasetUsed) {
+    private void saveToCSV(String algorithmName, double makespan, double cost, double energy) {
         String csvFile = "workflow_metrics.csv";
         boolean fileExists = new File(csvFile).exists();
         
         try (FileWriter writer = new FileWriter(csvFile, true)) {
             // Write header if file doesn't exist
             if (!fileExists) {
-                writer.append("algorithm_name,makespan,cost,energy,dataset_used\n");
+                writer.append("algorithm_name,makespan,cost,energy\n");
             }
             
             // Write data
-            writer.append(String.format("%s,%.4f,%.4f,%.4f,%s\n", 
-                algorithmName, makespan, cost, energy, datasetUsed));
+            writer.append(String.format("%s,%.4f,%.4f,%.4f\n", 
+                algorithmName, makespan, cost, energy));
             
         } catch (IOException e) {
             System.err.println("Error writing to CSV file: " + e.getMessage());
@@ -425,3 +436,10 @@ private double calculateTaskEnergySimple(Cloudlet cloudlet, Vm vm) {
 
 
 }
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: org/example/WorkflowMetrics#saveToCSV#
