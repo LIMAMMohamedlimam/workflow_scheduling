@@ -1,0 +1,184 @@
+package org.example;
+
+import org.cloudsimplus.brokers.DatacenterBroker;
+import org.cloudsimplus.brokers.DatacenterBrokerSimple;
+import org.cloudsimplus.cloudlets.Cloudlet;
+import org.cloudsimplus.cloudlets.CloudletSimple;
+import org.cloudsimplus.core.CloudSimPlus;
+import org.cloudsimplus.datacenters.Datacenter;
+import org.cloudsimplus.datacenters.DatacenterSimple;
+import org.cloudsimplus.hosts.Host;
+import org.cloudsimplus.hosts.HostSimple;
+import org.cloudsimplus.power.models.PowerModelHostSimple;
+import org.cloudsimplus.resources.Pe;
+import org.cloudsimplus.resources.PeSimple;
+import org.cloudsimplus.schedulers.cloudlet.CloudletSchedulerSpaceShared;
+import org.cloudsimplus.utilizationmodels.UtilizationModelFull;
+import org.cloudsimplus.vms.Vm;
+import org.cloudsimplus.vms.VmSimple;
+
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.*;
+
+public class CustomCostSimulation {
+    
+
+    public static void main(String[] args) {
+        CloudSimPlus simulation = new CloudSimPlus(0.01);
+        
+        List<NodeSpec> nodes = loadNodesFromCSV("task40_nodes.csv");
+        List<TaskSpec> tasks = loadTasksFromCSV("task40_TaskDetails.csv");
+        
+        Map<String, NodeSpec> nodeMap = new HashMap<>();
+        for (NodeSpec node : nodes) {
+            node.datacenter = createDatacenter(simulation, node);
+            nodeMap.put(node.nodeId, node);
+        }
+        
+        DatacenterBroker broker = new DatacenterBrokerSimple(simulation);
+        broker.setVmDestructionDelay(10.0);
+        
+
+        // Create VMs with SpaceShared scheduler
+        List<Vm> vms = new ArrayList<>();
+        System.out.println("nodes size: " + nodes.size());
+        for (NodeSpec node : nodes) {
+            Vm vm = new VmSimple(node.mipsRating, 2)
+                    .setRam(2048)
+                    .setBw(10000)
+                    .setSize(50000)
+                    .setCloudletScheduler(new CloudletSchedulerSpaceShared());
+            vms.add(vm);
+            broker.submitVm(vm);
+        }
+
+        // Create cloudlets with round-robin assignment
+        List<Cloudlet> cloudlets = new ArrayList<>();
+        Map<Integer, Integer> cloudletToVmMap = new HashMap<>();
+        
+        for (int i = 0; i < tasks.size(); i++) {
+            TaskSpec task = tasks.get(i);
+            System.out.println("Creating cloudlet for task: " + task.taskId);
+            System.out.println("  Instructions: " + task.instructions
+                + ", Input Size: " + task.inputFileSize + " MB"
+                + ", Output Size: " + task.outputFileSize + " MB"
+            );
+            System.out.println(vms.size() + " VMs available for assignment.");
+            Vm assignedVm = vms.get(i % vms.size());
+            
+            Cloudlet cloudlet = new CloudletSimple(task.instructions, 2)
+                    .setFileSize(task.inputFileSize * 1024)
+                    .setOutputSize(task.outputFileSize * 1024)
+                    .setUtilizationModelCpu(new UtilizationModelFull())
+                    .setUtilizationModelRam(new UtilizationModelFull())
+                    .setUtilizationModelBw(new UtilizationModelFull());
+            
+            cloudlet.setVm(assignedVm);
+            cloudlets.add(cloudlet);
+            broker.submitCloudlet(cloudlet);
+            
+            cloudletToVmMap.put((int)cloudlet.getId(), (int)assignedVm.getId());
+        }
+
+        simulation.start();
+
+        // Calculate and print metrics
+        WorkflowMetrics metrics = new WorkflowMetrics(
+            simulation, nodes, tasks, cloudlets, vms, cloudletToVmMap
+        );
+        metrics.calculateAndPrint();
+    }
+
+    private static List<NodeSpec> loadNodesFromCSV(String filename) {
+        System.out.println("Loading nodes from CSV: " + filename);
+        List<NodeSpec> nodes = new ArrayList<>();
+        
+        try (Reader reader = new InputStreamReader(
+                CustomCostSimulation.class.getClassLoader().getResourceAsStream(filename));
+             CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build()) {
+            
+            String[] line;
+            while ((line = csvReader.readNext()) != null) {
+                System.out.println("Read line: " + Arrays.toString(line));
+                if (line.length >= 5) {
+                    String nodeId = line[0].trim();
+                    double mips = Double.parseDouble(line[1].trim());
+                    double cpuCost = Double.parseDouble(line[2].trim());
+                    double memCost = Double.parseDouble(line[3].trim());
+                    double bwCost = Double.parseDouble(line[4].trim());
+
+                    double idlePower = 130.0;   // Default idle power in Watts
+                    double activePower = 230.0; // Default active power in Watts
+                    nodes.add(new NodeSpec(nodeId, mips, cpuCost, memCost, bwCost, idlePower, activePower));
+                    System.out.println("Loaded node: " + nodeId);
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Error reading nodes CSV: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        return nodes;
+    }
+    
+    private static List<TaskSpec> loadTasksFromCSV(String filename) {
+        List<TaskSpec> tasks = new ArrayList<>();
+        
+        try (Reader reader = new InputStreamReader(
+                CustomCostSimulation.class.getClassLoader().getResourceAsStream(filename));
+             CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build()) {
+            
+            String[] line;
+            while ((line = csvReader.readNext()) != null) {
+                if (line.length >= 5) {
+                    String taskId = line[0].trim();
+                    long instructions = (long)(Double.parseDouble(line[1].trim()) * 1000);
+                    long memory = Long.parseLong(line[2].trim());
+                    long inputSize = Long.parseLong(line[3].trim());
+                    long outputSize = Long.parseLong(line[4].trim());
+                    
+                    tasks.add(new TaskSpec(taskId, instructions, memory, inputSize, outputSize));
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Error reading tasks CSV: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        return tasks;
+    }
+
+    private static Datacenter createDatacenter(CloudSimPlus simulation, NodeSpec spec) {
+    List<Pe> peList = new ArrayList<>();
+    for (int i = 0; i < 8; i++) {
+        peList.add(new PeSimple(spec.mipsRating));
+    }
+
+    long hostRam = 819200;
+    long hostStorage = 5000000;
+    long hostBw = 500000;
+
+    Host host = new HostSimple(hostRam, hostBw, hostStorage, peList);
+    host.enableUtilizationStats();
+    host.setPowerModel(new PowerModelHostSimple(300, 100));
+    // REMOVE THIS LINE: host.setPowerModel(new PowerModelLinear(spec.activePower, spec.idlePower));
+    
+    List<Host> hostList = new ArrayList<>();
+    hostList.add(host);
+
+    DatacenterSimple dc = new DatacenterSimple(simulation, hostList);
+    dc.getCharacteristics()
+        .setCostPerSecond(spec.costPerCpuSecond)
+        .setCostPerMem(spec.costPerMem)
+        .setCostPerBw(spec.costPerBw)
+        .setCostPerStorage(spec.costPerStorage);
+    dc.setSchedulingInterval(1.0); ;
+
+    return dc;
+}
+
+}
