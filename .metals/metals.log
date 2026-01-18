@@ -9830,3 +9830,545 @@ WARNING: Unmatched cancel notification for request id 2
 2026.01.18 22:24:26 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
 Jan 18, 2026 10:38:28 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2026.01.18 22:40:38 INFO  Shutting down server
+2026.01.18 22:40:38 INFO  shutting down Metals
+2026.01.18 22:40:38 INFO  Exiting server
+2026.01.18 22:40:39 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+
+2026.01.18 23:09:27 INFO  Started: Metals version 1.6.4 in folders '/home/limam/Desktop/optim_project' for client Visual Studio Code 1.108.1.
+2026.01.18 23:09:28 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.01.18 23:09:28 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:09:29 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:10:41 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:10:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WOARDAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:46 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WOARDAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WOARDAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WOARDAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WOARDAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WOARDAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WOARDAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WOARDAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/HybridWOASAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:57 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/HybridWOASAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/HybridWOASAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/HybridWOASAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/HybridWOASAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:10:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/HybridWOASAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:44:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/HybridWOASAScheduling.java. Using fallback presentation compiler.
+2026.01.18 23:47:29 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:47:29 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:47:29 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:47:29 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:47:30 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:47:59 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:47:59 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:08 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:11 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:11 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:14 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:15 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:15 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:15 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:15 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:15 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:15 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:18 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:18 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:18 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:18 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:18 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:18 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:19 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:20 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:48:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:23 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:23 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:24 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:24 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:24 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:24 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:48:24 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:24 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:24 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:24 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:25 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:25 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:25 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:25 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:26 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:26 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:27 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:27 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:28 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:28 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:28 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:28 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:29 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:29 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:30 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:30 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:29 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:31 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:40 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:41 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:42 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:41 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:42 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:43 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:43 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:53 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:55 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:55 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:56 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:57 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:48:59 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:48:59 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:04 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:04 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:04 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:06 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:06 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:06 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:06 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:06 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:06 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:07 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:07 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:08 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:09 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:09 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:11 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:11 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:13 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:13 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:14 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:14 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:14 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:15 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:15 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:15 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+Jan 18, 2026 11:49:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 413
+2026.01.18 23:49:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:16 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:17 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:17 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:37 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:37 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:41 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:41 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:42 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:42 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:51 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:52 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:52 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:52 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:53 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:55 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:56 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:49:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:59 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:58 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:59 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:59 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:00 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:00 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:49:59 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:49:59 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:01 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:00 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:02 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:03 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:04 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:04 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:04 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:04 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:04 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:04 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:04 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:05 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:06 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:06 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:06 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:06 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:50:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:07 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:09 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:10 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:10 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:11 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:12 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:13 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:13 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:36 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:36 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:36 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:37 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:37 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:37 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:40 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:40 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:41 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:41 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:41 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:41 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:42 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:42 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:42 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:43 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:42 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:42 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:43 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:43 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:44 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:44 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:44 WARN  Running javac-semanticdb failed for file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Output:
+
+2026.01.18 23:50:43 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:43 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:43 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:44 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:43 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+Jan 18, 2026 11:50:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 706
+2026.01.18 23:50:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:45 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:46 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:46 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:49 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:54 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:55 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:50:55 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:55 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:55 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:55 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:55 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:50:56 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:51:25 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:51:30 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:51:30 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:51:34 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:52:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:52:48 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:19 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:54:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:19 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:21 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:22 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:25 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java. Using fallback presentation compiler.
+2026.01.18 23:54:25 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java. Using fallback presentation compiler.
+2026.01.18 23:54:25 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java. Using fallback presentation compiler.
+2026.01.18 23:54:25 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java. Using fallback presentation compiler.
+2026.01.18 23:54:45 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java
+2026.01.18 23:54:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:45 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:47 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:49 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java. Using fallback presentation compiler.
+2026.01.18 23:54:50 INFO  Created report: Optional[file:///home/limam/Desktop/optim_project/src/main/java/org/example/CustomCostSimulation.java]
+2026.01.18 23:54:50 INFO  empty definition using pc, found symbol in pc:  (full report at: "/home/limam/Desktop/optim_project/.metals/.reports/metals-full/2026-01-18/r_empty-definition_23-54-50-828.md")
+2026.01.18 23:54:50 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java. Using fallback presentation compiler.
+2026.01.18 23:54:51 WARN  no build target for: /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java
+2026.01.18 23:54:51 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java. Using fallback presentation compiler.
+2026.01.18 23:54:51 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java. Using fallback presentation compiler.
+2026.01.18 23:54:51 INFO  no build target found for /home/limam/Desktop/optim_project/src/main/java/org/example/WorkflowMetrics.java. Using fallback presentation compiler.
+Jan 18, 2026 11:58:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

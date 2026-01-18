@@ -32,24 +32,38 @@ public class CustomCostSimulation {
     
 
     public static void main(String[] args) {
-        ArrayList<String> algorithms = new ArrayList<>(Arrays.asList(
-            "SA_MultiObjective", "MOWOA", "WOASA", "WOARDA", "RDA"
-        ));
 
-        ArrayList<String> datasets = new ArrayList<>(Arrays.asList(
-             "task40", "task80", "task120", "task160" , "task200", "task240", "task280"
-        ));
+        boolean generateEvalData = false; // Set to true to generate evaluation data
+        String input_data = "";
+        String algorithm = "";
 
-        for (String dataset : datasets) {
-            for (String alg : algorithms) {
-                for (int i=0 ;i<100;i++){
-                    System.out.println("\n\n==============================");
-                    System.out.println("Running simulation number " + i + " with Algorithm: " + alg + " on Dataset: " + dataset);
-                    System.out.println("==============================\n");
-                    runSimulation(alg, dataset);
-                }
-            }
+        input_data = args.length > 0 ? args[0] : DATASET_USED;
+        algorithm = args.length > 1 ? args[1] : SCHEDULING_ALGORITHM;
+        generateEvalData = args.length > 2 ? Boolean.parseBoolean(args[2]) : false;
+
+        if (!generateEvalData){
+            System.out.println("Running single simulation with Algorithm: " + algorithm + " on Dataset: " + input_data);
+            runSimulation(algorithm, input_data);
         }
+        if (generateEvalData){
+            ArrayList<String> algorithms = new ArrayList<>(Arrays.asList(
+                "SA_MultiObjective", "MOWOA", "WOASA", "WOARDA", "RDA"
+            ));
+
+            ArrayList<String> datasets = new ArrayList<>(Arrays.asList(
+                "task40", "task80", "task120", "task160" , "task200", "task240", "task280"
+            ));
+
+            for (String dataset : datasets) {
+                for (String alg : algorithms) {
+                    for (int i=0 ;i<100;i++){
+                        System.out.println("\n\n==============================");
+                        System.out.println("Running simulation number " + i + " with Algorithm: " + alg + " on Dataset: " + dataset);
+                        System.out.println("==============================\n");
+                        runSimulation(alg, dataset);
+                    }
+                }
+            }}
     }
 
     public static void runSimulation(String alg , String dataset) {
