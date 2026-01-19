@@ -52,6 +52,7 @@ mvn exec:java -Dexec.mainClass="org.example.CustomCostSimulation" \
   -Dexec.args="task40 WOA false"
 ```
 
+
 ---
 
 ## Arguments en ligne de commande
@@ -63,6 +64,23 @@ mvn exec:java -Dexec.mainClass="org.example.CustomCostSimulation" \
 |     2 | Génération dataset eval | Générer le dataset d’évaluation | `true`, `false`                                                           |
 
 ---
+
+# Lancer le WebView
+
+## Lancer le Server 
+
+```bash 
+mvn spring-boot:run
+
+```
+
+## Lancer l'evaluation via le webview 
+Commencer par lancer et config le env python
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install requirement.txt
+```
 
 ## Exemple
 
