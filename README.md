@@ -100,8 +100,5 @@ Cette commande exécute l’algorithme hybride **WOA + SA** sur le dataset `task
 
 ---
 
-## Licence
-
-Précisez la licence ici si applicable.
 
 
