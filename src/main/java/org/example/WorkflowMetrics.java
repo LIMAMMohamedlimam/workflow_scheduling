@@ -8,10 +8,14 @@ import org.cloudsimplus.hosts.Host;
 import org.cloudsimplus.power.models.PowerModelHost;
 import org.cloudsimplus.power.models.PowerModelHostSimple;
 
+import java.io.BufferedReader;
 import java.io.File;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -32,7 +36,29 @@ public class WorkflowMetrics {
         this.vms = vms;
         this.cloudletToVmMap = cloudletToVmMap;
     }
+    public void eval_csv(String algorithmName, String datasetUsed , String output_csv) {
+        // Calculate metrics
+        double makespan = calculateMakespan();
+        double totalCost = calculateTotalCost();
+        double totalEnergy = calculateTotalEnergyNew();
+        
+        // Save to CSV
+        saveToCSV(algorithmName, makespan, totalCost, totalEnergy , datasetUsed , output_csv);
 
+        // System.out.println("\n" + "=".repeat(80));
+        // System.out.println("WORKFLOW EXECUTION METRICS - MATHEMATICAL MODEL");
+        // System.out.println("=".repeat(80));
+
+        // // 1. MAKESPAN
+        // System.out.printf("\n1. MAKESPAN: %.4f seconds\n", makespan);
+
+        // // 2. TOTAL COST
+        // System.out.printf("\n2. TOTAL COST: $%.4f\n", totalCost);
+
+        // // 3. ENERGY CONSUMPTION
+        // System.out.printf("\n3. TOTAL ENERGY: %.4f Watt-Seconds (Joules)\n", totalEnergy);
+        
+    }
     public void calculateAndPrint(String algorithmName , String datasetUsed) {
         // Calculate metrics
         double makespan = calculateMakespan();
@@ -40,7 +66,8 @@ public class WorkflowMetrics {
         double totalEnergy = calculateTotalEnergyNew();
         
         // Save to CSV
-        saveToCSV(algorithmName, makespan, totalCost, totalEnergy , datasetUsed);
+        saveToCSV(algorithmName, makespan, totalCost, totalEnergy , datasetUsed , null);
+        
 
         System.out.println("\n" + "=".repeat(80));
         System.out.println("WORKFLOW EXECUTION METRICS - MATHEMATICAL MODEL");
@@ -56,11 +83,92 @@ public class WorkflowMetrics {
         System.out.printf("\n3. TOTAL ENERGY: %.4f Watt-Seconds (Joules)\n", totalEnergy);
 
         // 4. DETAILED BREAKDOWN
-        // printDetailedMetrics();
+        printDetailedMetrics();
     }
 
-    private void saveToCSV(String algorithmName, double makespan, double cost, double energy, String datasetUsed) {
-        String csvFile = "workflow_metrics.csv";
+    public static void runPythonScript(String inputCsv, String outputCsv, String outputDir) 
+        throws IOException, InterruptedException {
+        
+        // Build command with separate arguments
+        List<String> command = new ArrayList<>();
+        command.add("python");           // or "python3"
+        command.add("eval.py");          // Python script name
+        command.add(inputCsv);           // First positional argument
+        command.add(outputCsv);          // Second positional argument
+        command.add(outputDir);          // Third positional argument
+        
+        // Create ProcessBuilder with the command
+        ProcessBuilder processBuilder = new ProcessBuilder(command);
+        
+        // Set working directory if your script is in a different location
+        // processBuilder.directory(new File("path/to/script/directory"));
+        
+        // Redirect error stream to standard output
+        processBuilder.redirectErrorStream(true);
+        
+        // Start the process
+        Process process = processBuilder.start();
+        
+        // Read the output
+        BufferedReader reader = new BufferedReader(
+            new InputStreamReader(process.getInputStream())
+        );
+        
+        String line;
+        System.out.println("Python script output:");
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
+        
+        // Wait for the process to complete
+        int exitCode = process.waitFor();
+        
+        if (exitCode != 0) {
+            throw new RuntimeException("Python script execution failed with exit code: " + exitCode);
+        }
+        
+        System.out.println("Python script executed successfully");
+    }
+
+
+
+    public Map<String,String> calculateMetrics(String algorithmName , String datasetUsed) {
+        Map<String,String> results = new HashMap<>();
+        // Calculate metrics
+        double makespan = calculateMakespan();
+        double totalCost = calculateTotalCost();
+        double totalEnergy = calculateTotalEnergyNew();
+        results.put("Makespan", String.format("%.4f", makespan));
+        results.put("Total Cost", String.format("%.4f", totalCost));
+        results.put("Total Energy", String.format("%.4f", totalEnergy));
+        // Save to CSV
+        saveToCSV(algorithmName, makespan, totalCost, totalEnergy , datasetUsed , null);
+
+        System.out.println("\n" + "=".repeat(80));
+        System.out.println("WORKFLOW EXECUTION METRICS - MATHEMATICAL MODEL");
+        System.out.println("=".repeat(80));
+
+        // 1. MAKESPAN
+        System.out.printf("\n1. MAKESPAN: %.4f seconds\n", makespan);
+
+        // 2. TOTAL COST
+        System.out.printf("\n2. TOTAL COST: $%.4f\n", totalCost);
+
+        // 3. ENERGY CONSUMPTION
+        System.out.printf("\n3. TOTAL ENERGY: %.4f Watt-Seconds (Joules)\n", totalEnergy);
+
+        System.out.println("\n " + "=".repeat(80));
+
+        // 4. DETAILED BREAKDOWN
+        // printDetailedMetrics();
+        return results;
+    }
+
+    private void saveToCSV(String algorithmName, double makespan, double cost, double energy, String datasetUsed, String output_csv) {
+        if (output_csv == null || output_csv.isEmpty()) {
+            output_csv = "workflow_metrics.csv";
+        }
+        String csvFile = output_csv;
         boolean fileExists = new File(csvFile).exists();
         
         try (FileWriter writer = new FileWriter(csvFile, true)) {

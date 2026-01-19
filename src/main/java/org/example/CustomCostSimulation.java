@@ -20,12 +20,16 @@ import org.cloudsimplus.vms.VmSimple;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Array;
 import java.util.*;
 
 public class CustomCostSimulation {
+
+    
+
     private static final int IS_MultiObjective = 1;
     private static  String SCHEDULING_ALGORITHM = "RDA"; // Options: ROUNDROBIN, FCFS, SA_MultiObjective
     private static  String DATASET_USED = "task80";
@@ -63,7 +67,128 @@ public class CustomCostSimulation {
                         runSimulation(alg, dataset);
                     }
                 }
-            }}
+            }
+        }
+    }
+
+    public static void runEval(){
+        String output_csv = "outputs/eval_metrics.csv";
+        ArrayList<String> algorithms = new ArrayList<>(Arrays.asList(
+                "SA_MultiObjective", "MOWOA", "WOASA", "WOARDA", "RDA"
+            ));
+
+            ArrayList<String> datasets = new ArrayList<>(Arrays.asList(
+                "task40", "task80", "task120", "task160" , "task200", "task240", "task280"
+            ));
+
+            for (String dataset : datasets) {
+                for (String alg : algorithms) {
+                    for (int i=0 ;i<100;i++){
+                        System.out.println("\n\n==============================");
+                        System.out.println("Running simulation number " + i + " with Algorithm: " + alg + " on Dataset: " + dataset);
+                        System.out.println("==============================\n");
+                        eval(alg, dataset, output_csv);
+                    }
+                }
+            }
+
+        String input_csv = output_csv;
+        String result_csv = "outputs/metrics.csv";
+        String img_dir = "outputs/images";
+
+
+
+        try {
+            WorkflowMetrics.runPythonScript(input_csv, result_csv, img_dir);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void eval(String alg , String dataset , String output_csv) {
+        String DATASET_USED = dataset;
+        String SCHEDULING_ALGORITHM = alg;
+        CloudSimPlus simulation = new CloudSimPlus(0.1);
+        
+        List<NodeSpec> nodes = loadNodesFromCSV(DATASET_USED + "_NodeDetails.csv");
+        List<TaskSpec> tasks = loadTasksFromCSV(DATASET_USED + "_TaskDetails.csv");
+        
+        Map<String, NodeSpec> nodeMap = new HashMap<>();
+        for (NodeSpec node : nodes) {
+            node.datacenter = createDatacenter(simulation, node);
+            nodeMap.put(node.nodeId, node);
+        }
+        
+        DatacenterBroker broker = new DatacenterBrokerSimple(simulation);
+        broker.setVmDestructionDelay(10.0);
+
+        // Create VMs with SpaceShared scheduler
+        List<Vm> vms = new ArrayList<>();
+        // System.out.println("nodes size: " + nodes.size());
+        for (NodeSpec node : nodes) {
+            Vm vm = new VmSimple(node.mipsRating, 2)
+                    .setRam(2048)
+                    .setBw(10000)
+                    .setSize(50000)
+                    .setCloudletScheduler(new CloudletSchedulerSpaceShared());
+            vms.add(vm);
+            broker.submitVm(vm);
+        }
+
+        
+
+         // UPDATED: Create cloudlets WITHOUT assigning VMs yet
+    List<Cloudlet> cloudlets = new ArrayList<>();
+    // System.out.println("Creating " + tasks.size() + " cloudlets...");
+    
+    for (int i = 0; i < tasks.size(); i++) {
+        TaskSpec task = tasks.get(i);
+        
+        Cloudlet cloudlet = new CloudletSimple(task.instructions, 2)
+                .setFileSize(task.inputFileSize * 1024)
+                .setOutputSize(task.outputFileSize * 1024)
+                .setUtilizationModelCpu(new UtilizationModelFull())
+                .setUtilizationModelRam(new UtilizationModelFull())
+                .setUtilizationModelBw(new UtilizationModelFull());
+        cloudlet.setId((long) i ) ; // Set cloudlet ID to index for easier mapping
+       
+        
+        cloudlets.add(cloudlet);
+        
+        // Optional: Add finish listener
+        cloudlet.addOnFinishListener(info -> {
+            System.out.println("  Cloudlet " + info.getCloudlet().getId() + 
+                             " finished at time " + String.format("%.2f", info.getTime()));
+        });
+    }
+        SchedulingAlgorithm scheduler = null;
+    
+        // UPDATED: Apply dynamic scheduling
+        System.out.println("\n=== Applying " + SCHEDULING_ALGORITHM + " Scheduling ===");
+        if (IS_MultiObjective == 1) {
+            scheduler = getSchedulingAlgorithm(SCHEDULING_ALGORITHM , 0.5 , 0.3 , 0.2);
+        }else{
+            scheduler = getSchedulingAlgorithm(SCHEDULING_ALGORITHM);
+        }
+        Map<Integer, Integer> cloudletToVmMap = scheduler.schedule(cloudlets, vms, tasks, nodes);
+        
+        
+
+        // Submit all cloudlets after scheduling
+        broker.submitCloudletList(cloudlets);
+
+        System.out.println("\nStarting simulation...\n");
+        simulation.start();
+
+        System.out.println("\n=== Simulation completed at time: " + 
+                        String.format("%.2f", simulation.clock()) + " ===");
+
+        // Calculate and print metrics
+        WorkflowMetrics metrics = new WorkflowMetrics(
+            simulation, nodes, tasks, cloudlets, vms, cloudletToVmMap
+        );
+        System.out.println("Algorithm used: " + SCHEDULING_ALGORITHM);
+        metrics.eval_csv(SCHEDULING_ALGORITHM , DATASET_USED , output_csv);
     }
 
     public static void runSimulation(String alg , String dataset) {
@@ -150,6 +275,93 @@ public class CustomCostSimulation {
         );
         System.out.println("Algorithm used: " + SCHEDULING_ALGORITHM);
         metrics.calculateAndPrint(SCHEDULING_ALGORITHM , DATASET_USED);
+    }
+
+    public static Map<String,String> runSimulationMap(String alg , String dataset , boolean is_eval_process) {
+        String DATASET_USED = dataset;
+        String SCHEDULING_ALGORITHM = alg;
+        CloudSimPlus simulation = new CloudSimPlus(0.1);
+        
+        List<NodeSpec> nodes = loadNodesFromCSV(DATASET_USED + "_NodeDetails.csv");
+        List<TaskSpec> tasks = loadTasksFromCSV(DATASET_USED + "_TaskDetails.csv");
+        
+        Map<String, NodeSpec> nodeMap = new HashMap<>();
+        for (NodeSpec node : nodes) {
+            node.datacenter = createDatacenter(simulation, node);
+            nodeMap.put(node.nodeId, node);
+        }
+        
+        DatacenterBroker broker = new DatacenterBrokerSimple(simulation);
+        broker.setVmDestructionDelay(10.0);
+
+        // Create VMs with SpaceShared scheduler
+        List<Vm> vms = new ArrayList<>();
+        // System.out.println("nodes size: " + nodes.size());
+        for (NodeSpec node : nodes) {
+            Vm vm = new VmSimple(node.mipsRating, 2)
+                    .setRam(2048)
+                    .setBw(10000)
+                    .setSize(50000)
+                    .setCloudletScheduler(new CloudletSchedulerSpaceShared());
+            vms.add(vm);
+            broker.submitVm(vm);
+        }
+
+        
+
+         // UPDATED: Create cloudlets WITHOUT assigning VMs yet
+    List<Cloudlet> cloudlets = new ArrayList<>();
+    // System.out.println("Creating " + tasks.size() + " cloudlets...");
+    
+    for (int i = 0; i < tasks.size(); i++) {
+        TaskSpec task = tasks.get(i);
+        
+        Cloudlet cloudlet = new CloudletSimple(task.instructions, 2)
+                .setFileSize(task.inputFileSize * 1024)
+                .setOutputSize(task.outputFileSize * 1024)
+                .setUtilizationModelCpu(new UtilizationModelFull())
+                .setUtilizationModelRam(new UtilizationModelFull())
+                .setUtilizationModelBw(new UtilizationModelFull());
+        cloudlet.setId((long) i ) ; // Set cloudlet ID to index for easier mapping
+       
+        
+        cloudlets.add(cloudlet);
+        
+        // Optional: Add finish listener
+        cloudlet.addOnFinishListener(info -> {
+            System.out.println("  Cloudlet " + info.getCloudlet().getId() + 
+                             " finished at time " + String.format("%.2f", info.getTime()));
+        });
+    }
+        SchedulingAlgorithm scheduler = null;
+    
+        // UPDATED: Apply dynamic scheduling
+        System.out.println("\n=== Applying " + SCHEDULING_ALGORITHM + " Scheduling ===");
+        if (IS_MultiObjective == 1) {
+            scheduler = getSchedulingAlgorithm(SCHEDULING_ALGORITHM , 0.5 , 0.3 , 0.2);
+        }else{
+            scheduler = getSchedulingAlgorithm(SCHEDULING_ALGORITHM);
+        }
+        Map<Integer, Integer> cloudletToVmMap = scheduler.schedule(cloudlets, vms, tasks, nodes);
+        
+        
+
+        // Submit all cloudlets after scheduling
+        broker.submitCloudletList(cloudlets);
+
+        System.out.println("\nStarting simulation...\n");
+        simulation.start();
+
+        System.out.println("\n=== Simulation completed at time: " + 
+                        String.format("%.2f", simulation.clock()) + " ===");
+
+        // Calculate and print metrics
+        WorkflowMetrics metrics = new WorkflowMetrics(
+            simulation, nodes, tasks, cloudlets, vms, cloudletToVmMap
+        );
+        System.out.println("Algorithm used: " + SCHEDULING_ALGORITHM);
+
+        return metrics.calculateMetrics(SCHEDULING_ALGORITHM , DATASET_USED);
     }
 
     private static List<NodeSpec> loadNodesFromCSV(String filename) {

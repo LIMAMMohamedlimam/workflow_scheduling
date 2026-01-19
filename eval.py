@@ -1,3 +1,4 @@
+import argparse
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -427,50 +428,159 @@ class MultiAlgorithmEvaluator:
 # USAGE EXAMPLE
 # ============================================================================
 
-# Load your CSV file
-evaluator = MultiAlgorithmEvaluator('workflow_metrics.csv')
-
-# Extract Pareto fronts
-evaluator.extract_pareto_fronts()
-
-# Calculate metrics
-metrics_df = evaluator.calculate_metrics()
-
-# Save metrics
-metrics_df.to_csv('performance_metrics.csv', index=False)
-print("\n✅ Metrics saved to: performance_metrics.csv")
-
-# Display results
-print("\n" + "="*80)
-print("PERFORMANCE METRICS SUMMARY")
-print("="*80)
-for dataset in evaluator.datasets:
-    print(f"\n{dataset}:")
-    dataset_metrics = metrics_df[metrics_df['Dataset'] == dataset].sort_values('Hypervolume', ascending=False)
-    print(dataset_metrics[['Algorithm', 'Hypervolume', 'Spacing', 'IGD', 'N_Solutions']].to_string(index=False))
-
-# Create visualizations
-evaluator.create_visualizations(output_dir='results')
 
 
+# # Load your CSV file
+# evaluator = MultiAlgorithmEvaluator('workflow_metrics.csv')
 
-# Rank algorithms
-ranking = evaluator.rank_algorithms(
-    weights={'Hypervolume': 0.5, 'IGD': 0.3, 'Spacing': 0.2},
-    by_dataset=True,
-    aggregate='mean'
-)
+# # Extract Pareto fronts
+# evaluator.extract_pareto_fronts()
 
-print("\n" + "="*80)
-print("ALGORITHM RANKING (BEST -> WORST)")
-print("="*80)
+# # Calculate metrics
+# metrics_df = evaluator.calculate_metrics()
 
-for dataset in evaluator.datasets:
-    print(f"\n{dataset}:")
-    print(ranking[dataset][['Rank','Algorithm','Score','Hypervolume','IGD','Spacing','N_Solutions']].to_string(index=False))
+# # Save metrics
+# metrics_df.to_csv('performance_metrics.csv', index=False)
+# print("\n✅ Metrics saved to: performance_metrics.csv")
 
-print("\nGLOBAL:")
-print(ranking['GLOBAL'].to_string(index=False))
+# # Display results
+# print("\n" + "="*80)
+# print("PERFORMANCE METRICS SUMMARY")
+# print("="*80)
+# for dataset in evaluator.datasets:
+#     print(f"\n{dataset}:")
+#     dataset_metrics = metrics_df[metrics_df['Dataset'] == dataset].sort_values('Hypervolume', ascending=False)
+#     print(dataset_metrics[['Algorithm', 'Hypervolume', 'Spacing', 'IGD', 'N_Solutions']].to_string(index=False))
 
-# Visualize ranking
-evaluator.plot_algorithm_ranking(output_dir='results', top_k=None)
+# # Create visualizations
+# evaluator.create_visualizations(output_dir='results')
+
+
+
+# # Rank algorithms
+# ranking = evaluator.rank_algorithms(
+#     weights={'Hypervolume': 0.5, 'IGD': 0.3, 'Spacing': 0.2},
+#     by_dataset=True,
+#     aggregate='mean'
+# )
+
+# print("\n" + "="*80)
+# print("ALGORITHM RANKING (BEST -> WORST)")
+# print("="*80)
+
+# for dataset in evaluator.datasets:
+#     print(f"\n{dataset}:")
+#     print(ranking[dataset][['Rank','Algorithm','Score','Hypervolume','IGD','Spacing','N_Solutions']].to_string(index=False))
+
+# print("\nGLOBAL:")
+# print(ranking['GLOBAL'].to_string(index=False))
+
+# # Visualize ranking
+# evaluator.plot_algorithm_ranking(output_dir='results', top_k=None)
+
+import argparse
+import os
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Evaluate multi-algorithm workflow scheduling results"
+    )
+
+    parser.add_argument(
+        "input_csv",
+        nargs="?",
+        default="workflow_metrics.csv",
+        help="Path to input CSV file (default: workflow_metrics.csv)"
+    )
+
+    parser.add_argument(
+        "output_csv",
+        nargs="?",
+        default="performance_metrics.csv",
+        help="Path to output metrics CSV file (default: performance_metrics.csv)"
+    )
+
+    parser.add_argument(
+        "output_dir",
+        nargs="?",
+        default="results",
+        help="Directory for plots and visual outputs (default: results/)"
+    )
+
+    args = parser.parse_args()
+
+    # Fallback safety
+    input_csv = args.input_csv or "workflow_metrics.csv"
+    output_csv = args.output_csv or "performance_metrics.csv"
+    output_dir = args.output_dir or "results"
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    print(f"📂 Input CSV   : {input_csv}")
+    print(f"💾 Output CSV  : {output_csv}")
+    print(f"📊 Output Dir  : {output_dir}")
+
+    # Load input CSV
+    evaluator = MultiAlgorithmEvaluator(input_csv)
+
+    # Extract Pareto fronts
+    evaluator.extract_pareto_fronts()
+
+    # Calculate metrics
+    metrics_df = evaluator.calculate_metrics()
+
+    # Save metrics
+    metrics_df.to_csv(output_csv, index=False)
+    print(f"\n✅ Metrics saved to: {output_csv}")
+
+    # Display results
+    print("\n" + "=" * 80)
+    print("PERFORMANCE METRICS SUMMARY")
+    print("=" * 80)
+
+    for dataset in evaluator.datasets:
+        print(f"\n{dataset}:")
+        dataset_metrics = (
+            metrics_df[metrics_df["Dataset"] == dataset]
+            .sort_values("Hypervolume", ascending=False)
+        )
+        print(
+            dataset_metrics[
+                ["Algorithm", "Hypervolume", "Spacing", "IGD", "N_Solutions"]
+            ].to_string(index=False)
+        )
+
+    # Create visualizations
+    evaluator.create_visualizations(output_dir=output_dir)
+
+    # Rank algorithms
+    ranking = evaluator.rank_algorithms(
+        weights={"Hypervolume": 0.5, "IGD": 0.3, "Spacing": 0.2},
+        by_dataset=True,
+        aggregate="mean"
+    )
+
+    print("\n" + "=" * 80)
+    print("ALGORITHM RANKING (BEST -> WORST)")
+    print("=" * 80)
+
+    for dataset in evaluator.datasets:
+        print(f"\n{dataset}:")
+        print(
+            ranking[dataset][
+                ["Rank", "Algorithm", "Score", "Hypervolume", "IGD", "Spacing", "N_Solutions"]
+            ].to_string(index=False)
+        )
+
+    print("\nGLOBAL:")
+    print(ranking["GLOBAL"].to_string(index=False))
+
+    # Visualize ranking
+    evaluator.plot_algorithm_ranking(
+        output_dir=output_dir,
+        top_k=None
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 300px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            display: none;
+        }
+        .result-item {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cloud Scheduling Simulation</h1>
+    
+    <div class="form-group">
+        <label for="algorithm">Algorithm:</label>
+        <select id="algorithm">
+            <option value="MOWOA">MOWOA</option>
+            <option value="RDA">MORDA</option>
+            <option value="WOASA">HybridWOASA</option>
+            <option value="WOARDA">WOARDA</option>
+            <option value="SA_MULTIOBJECTIVE">MultiObjectiveSA</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="dataset">Dataset:</label>
+        <select id="dataset">
+            <option value="task40">Task 40</option>
+            <option value="task80">Task 80</option>
+            <option value="task120">Task 120</option>
+            <option value="task160">Task 160</option>
+            <option value="task200">Task 200</option>
+            <option value="task240">Task 240</option>
+            <option value="task280">Task 280</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="isEval">Evaluation Process:</label>
+        <select id="isEval">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+        </select>
+    </div>
+
+    <button onclick="runSimulation()">Run Simulation</button>
+
+    <div id="results">
+        <h2>Results:</h2>
+        <div class="result-item"><strong>Status:</strong> <span id="status"></span></div>
+        <div class="result-item"><strong>Algorithm:</strong> <span id="resultAlg"></span></div>
+        <div class="result-item"><strong>Dataset:</strong> <span id="resultDataset"></span></div>
+        <div class="result-item"><strong>Total Cost:</strong> <span id="totalCost"></span></div>
+        <div class="result-item"><strong>Makespan:</strong> <span id="makespan"></span></div>
+        <div class="result-item"><strong>Total Energy:</strong> <span id="totalEnergy"></span></div>
+    </div>
+
+    <button onclick="runEvaluation()" style="background-color: #2196F3;">Run Evaluation</button>
+
+    <script>
+        // Add this new function alongside your existing runSimulation function
+        async function runEvaluation() {
+            try {
+                const response = await fetch('/api/eval', {
+                    method: 'GET'
+                });
+
+                if (response.ok) {
+                    // Redirect to results page after successful response
+                    window.location.href = '/results.html';
+                } else {
+                    alert('Evaluation failed: ' + response.statusText);
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        }
+        async function runSimulation() {
+            const algname = document.getElementById('algorithm').value;
+            const dataset = document.getElementById('dataset').value;
+            const is_eval_process = document.getElementById('isEval').value === 'true';
+
+            const requestBody = {
+                algname: algname,
+                dataset: dataset,
+                is_eval_process: is_eval_process
+            };
+
+            try {
+                const response = await fetch('/api/schedule', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                const data = await response.json();
+
+                // Display results
+                document.getElementById('status').textContent = data.status;
+                document.getElementById('resultAlg').textContent = data.algorithm;
+                document.getElementById('resultDataset').textContent = data.dataset;
+                document.getElementById('totalCost').textContent = data.result['Total Cost'];
+                document.getElementById('makespan').textContent = data.result['Makespan'];
+                document.getElementById('totalEnergy').textContent = data.result['Total Energy'];
+                
+                document.getElementById('results').style.display = 'block';
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>
